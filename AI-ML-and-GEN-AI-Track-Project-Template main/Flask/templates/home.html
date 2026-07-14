@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Development Index</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/prediction">Predict</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="home-container">
+
+        <h1>Human Development Index</h1>
+
+        <p>
+            The Human Development Index (HDI) is a statistical composite index of
+            life expectancy, education and per capita income indicators, which are
+            used to rank countries into four tiers: Very High, High, Medium and Low
+            human development.
+        </p>
+
+        <p>
+            A country scores a higher HDI when life expectancy is higher, educational
+            attainment is better and Gross National Income (GNI) per capita is higher.
+            HDI helps evaluate the overall well-being and development of a country,
+            beyond just economic growth.
+        </p>
+
+        <p>
+            This project predicts the Human Development Index of a country using
+            machine learning based on important indicators such as life expectancy,
+            expected years of schooling, mean years of schooling and Gross National
+            Income per capita.
+        </p>
+
+        <a href="/prediction">
+            <button class="predict-btn">Predict HDI</button>
+        </a>
+
+    </div>
+
+</body>
+</html>

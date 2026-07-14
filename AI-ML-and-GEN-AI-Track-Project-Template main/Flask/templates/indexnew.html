@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDI Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/prediction">Predict</a>
+    </div>
+
+    <div class="container">
+
+        <h1>Human Development Index Prediction</h1>
+
+        <form action="/predict" method="POST">
+
+            <label>Country</label>
+            <select name="country">
+                <option>Afghanistan</option>
+                <option>India</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Australia</option>
+                <option>Canada</option>
+                <option>China</option>
+                <option>Japan</option>
+                <option>Germany</option>
+            </select>
+
+            <label>Life Expectancy at Birth (2021)</label>
+            <input
+                type="number"
+                name="life_expectancy"
+                step="0.01"
+                min="40"
+                max="90"
+                required
+            >
+
+            <label>Expected Years of Schooling (2021)</label>
+            <input
+                type="number"
+                name="expected_schooling"
+                step="0.01"
+                min="0"
+                max="25"
+                required
+            >
+
+            <label>Mean Years of Schooling (2021)</label>
+            <input
+                type="number"
+                name="mean_schooling"
+                step="0.01"
+                min="0"
+                max="20"
+                required
+            >
+
+            <label>Gross National Income Per Capita (2021)</label>
+            <input
+                type="number"
+                name="gni"
+                step="0.01"
+                required
+            >
+
+            <button type="submit">Predict</button>
+
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
