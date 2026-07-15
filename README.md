@@ -111,7 +111,7 @@ http://127.0.0.1:5000
 
 **Lokeswari Cheeraboyina**
 
-B.Tech – Computer Science and Machine Learning  
+B.Tech – Computer Science with Artificial Intelligence and Machine Learning  
 Vasireddy Venkatadri International Technological University (VVITU)
 
 ---
